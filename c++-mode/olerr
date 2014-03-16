@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: throw OomphLibError
+# key: olerr
+# --
+std::string err = "$0";
+throw OomphLibError(err, OOMPH_EXCEPTION_LOCATION,
+                    OOMPH_CURRENT_FUNCTION);

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: oomph loop over elements in mesh
+# key: felemesh
+# --
+${1:const unsigned n_ele = ${2:mesh_pt}->nelement();}
+for(unsigned ele=0; ele<n_ele; ele++)
+{
+  Element* ele_pt = $2->element_pt(ele);
+  ele_pt->$0;
+}

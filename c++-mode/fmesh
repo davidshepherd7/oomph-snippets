@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: oomph loop over meshes
+# key: fmesh
+# --
+${1:const unsigned n_msh = ${2:problem_pt}->nsub_mesh();}
+for(unsigned msh=0; msh<n_msh; msh++)
+{
+  Mesh* msh_pt = $2->mesh_pt(msh);
+  msh_pt->$0;
+}

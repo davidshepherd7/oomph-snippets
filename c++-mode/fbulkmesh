@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: oomph loop over bulk meshes
+# key: fbulkmesh
+# --
+${1:const unsigned n_msh = ${2:problem_pt}->nsub_mesh();}
+${3:const unsigned dim = ${4:3};}
+for(unsigned msh=0; msh<n_msh; msh++)
+{
+  Mesh* msh_pt = $2->mesh_pt(msh);
+
+  // Only for bulk meshes (elemental dimension equals nodal dimension,
+  // assuming at least one element in the mesh and a mesh of finite
+  // elements).
+  if(msh_pt->element_pt(0)->dim() 
+     == msh_pt->finite_element_pt(0)->ndim())
+   {
+     msh_pt->$0;
+   }
+}

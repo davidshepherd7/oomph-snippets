@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: idperr
+# key: idperr
+# --
+#ifdef PARANOID
+if(${1:${2:A_pt} == 0})
+{
+std::string err = "${3:$2 is null!}";
+throw OomphLibError(err, OOMPH_EXCEPTION_LOCATION,
+                    OOMPH_CURRENT_FUNCTION);
+}
+#endif
+
+$0

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: cout a variable with a label
+# key: vcout
+# --
+std::cout << "$1:" << $1 $0<< std::endl;

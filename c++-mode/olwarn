@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: create an OomphLibWarning
+# key: olwarn
+# --
+std::string warning = "$0";
+OomphLibWarning(warning, OOMPH_EXCEPTION_LOCATION,
+                OOMPH_CURRENT_FUNCTION);

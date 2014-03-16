@@ -1,0 +1,26 @@
+# -*- mode: snippet -*-
+# name: oomphclass
+# key: oomphclass
+# --
+/// Class to handle ??ds
+class $1 ${2:: public $3} 
+{
+public:
+/// Constructor
+$1() {}
+
+/// Virtual destructor
+virtual ~$1() {}
+
+$0
+
+private:
+/// Broken copy constructor
+$1(const $1& dummy)
+{BrokenCopy::broken_copy("$1");}
+
+/// Broken assignment operator
+void operator=(const $1& dummy) 
+{BrokenCopy::broken_assign("$1");}
+
+};

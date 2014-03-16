@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: ifdef mpi
+# key: idmpi
+# --
+#ifdef OOMPH_HAS_MPI
+$0
+${1:#else
+}
+#endif
