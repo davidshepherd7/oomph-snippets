@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: oomph loop over boundary nodes of a mesh
+# key: fboundnode
+# --
+${1:const unsigned n_boundary = ${2:mesh_pt}->nboundary();}
+for(unsigned b=0; b<n_boundary; b++)
+{
+  const unsigned n_boundary_node = $2->nboundary_node(b);
+  for(unsigned nd=0; nd<n_boundary_node; nd++)
+  {
+    Node* node_pt = $2->boundary_node_pt(b, nd);
+    nd_pt->$0;
+  }
+}
