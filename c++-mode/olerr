@@ -3,5 +3,5 @@
 # key: olerr
 # --
 std::string err = "$0";
-throw OomphLibError(err, OOMPH_EXCEPTION_LOCATION,
-                    OOMPH_CURRENT_FUNCTION);
+throw OomphLibError(err, OOMPH_CURRENT_FUNCTION, 
+                    OOMPH_EXCEPTION_LOCATION);
