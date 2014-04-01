@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: throw OomphLibError with not implemented message
+# key: olnotimp
+# --
+throw OomphLibError("Not implemented (yet?).", OOMPH_CURRENT_FUNCTION, 
+                    OOMPH_EXCEPTION_LOCATION);
