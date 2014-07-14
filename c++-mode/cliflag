@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: oomph new commandline flag
+# key: cliflag
+# --
+specify_command_line_flag("-$1", &${2:$1$(replace-regexp-in-string "-" "_" yas-text)},
+        "$0, default: $3.");
+ $2 = ${3:-1};
